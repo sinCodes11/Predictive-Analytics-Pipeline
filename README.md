@@ -276,7 +276,7 @@ MIT License - Free to use for portfolio and commercial projects
 
 ## Author
 
-Daniel X - [GitHub](https://github.com/yourusername) | [LinkedIn](https://linkedin.com/in/yourprofile)
+Daniel X - [GitHub](https://github.com/sinCodes11) | [LinkedIn](https://linkedin.com/in/daniel-sin-1881ske89)
 
 ---
 
