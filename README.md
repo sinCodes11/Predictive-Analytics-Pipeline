@@ -4,6 +4,11 @@
   <img src="assets/logo.svg" width="200" height="200" />
 </div>
 
+<p align="center">
+  <img src="https://img.shields.io/badge/python-3.9%2B-blue?style=flat-square" alt="Python">
+  <img src="https://img.shields.io/badge/OCI-Free%20Tier-orange?style=flat-square" alt="OCI">
+</p>
+
 A complete end-to-end machine learning pipeline for predicting customer churn, deployed on Oracle Cloud Infrastructure (OCI) using **100% free tier resources**.
 
 ## Business Problem
