@@ -1,8 +1,14 @@
 # Predictive Analytics Pipeline - Customer Churn Prediction
 
 <div align="center">
-  <img src="https://lottie.host/8040f7b8-8e10-4c57-8987-90c749b5c5e8/data_anim.gif" width="200" height="200" />
+  <img src="assets/logo.svg" width="200" height="200" />
 </div>
+
+<p align="center">
+  <a href="#"><img src="https://img.shields.io/badge/Lottie-dotLottie-7c3aed?style=flat-square" alt="Lottie"></a>
+  <a href="#"><img src="https://img.shields.io/badge/python-3.9%2B-blue?style=flat-square" alt="Python"></a>
+  <a href="#"><img src="https://img.shields.io/badge/OCI-Free%20Tier-orange?style=flat-square" alt="OCI"></a>
+</p>
 
 A complete end-to-end machine learning pipeline for predicting customer churn, deployed on Oracle Cloud Infrastructure (OCI) using **100% free tier resources**.
 
@@ -273,6 +279,34 @@ Content-Type: application/json
 - [ ] Add multi-model ensemble for improved accuracy
 - [ ] Integrate with CRM systems (Salesforce API)
 - [ ] Add explainable AI (SHAP values) for predictions
+
+## Lottie Animation Integration
+
+Visualize ML predictions with animated Lottie graphics powered by [dotLottie](https://dotlottie.io/):
+
+```html
+<dotlottie-wc
+  src="https://lottie.host/4db68bbd-31f6-4cd8-84eb-189de081159a/IGmMCqhzpt.lottie"
+  autoplay
+  loop
+></dotlottie-wc>
+<script type="module" src="https://unpkg.com/@lottiefiles/dotlottie-wc@latest/dist/dotlottie-wc.js"></script>
+```
+
+```bash
+npm install @lottiefiles/dotlottie-web
+```
+
+```js
+import { DotLottie } from '@lottiefiles/dotlottie-web'
+
+const player = new DotLottie({
+  canvas: document.getElementById('ml-canvas'),
+  src: '/animations/prediction-flow.lottie',
+  autoplay: true,
+  loop: true,
+})
+```
 
 ## License
 

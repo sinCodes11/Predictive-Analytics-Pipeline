@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f0f23"/>
+      <stop offset="100%" style="stop-color:#1a1a2e"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#7c3aed"/>
+      <stop offset="100%" style="stop-color:#3b82f6"/>
+    </linearGradient>
+    <linearGradient id="chart1" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" style="stop-color:#7c3aed;stop-opacity:0.4"/>
+      <stop offset="100%" style="stop-color:#7c3aed;stop-opacity:0"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="200" height="200" rx="32" fill="url(#bg)"/>
+  <g transform="translate(100,100)">
+    <!-- Grid background -->
+    <g opacity="0.05">
+      <line x1="-70" y1="-70" x2="70" y2="-70" stroke="#7c3aed" stroke-width="1"/>
+      <line x1="-70" y1="-35" x2="70" y2="-35" stroke="#7c3aed" stroke-width="1"/>
+      <line x1="-70" y1="0" x2="70" y2="0" stroke="#7c3aed" stroke-width="1"/>
+      <line x1="-70" y1="35" x2="70" y2="35" stroke="#7c3aed" stroke-width="1"/>
+      <line x1="-70" y1="70" x2="70" y2="70" stroke="#7c3aed" stroke-width="1"/>
+      <line x1="-70" y1="-70" x2="-70" y2="70" stroke="#7c3aed" stroke-width="1"/>
+      <line x1="-35" y1="-70" x2="-35" y2="70" stroke="#7c3aed" stroke-width="1"/>
+      <line x1="0" y1="-70" x2="0" y2="70" stroke="#7c3aed" stroke-width="1"/>
+      <line x1="35" y1="-70" x2="35" y2="70" stroke="#7c3aed" stroke-width="1"/>
+      <line x1="70" y1="-70" x2="70" y2="70" stroke="#7c3aed" stroke-width="1"/>
+    </g>
+    <!-- Upward trend line -->
+    <polyline points="-55,40 -35,30 -15,35 5,15 25,20 45,-10 55,-15" fill="none" stroke="url(#accent)" stroke-width="2.5" filter="url(#glow)" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Area under curve -->
+    <polygon points="-55,40 -35,30 -15,35 5,15 25,20 45,-10 55,-15 55,60 -55,60" fill="url(#chart1)"/>
+    <!-- Data points on curve -->
+    <circle cx="-55" cy="40" r="3" fill="#3b82f6" filter="url(#glow)"/>
+    <circle cx="-35" cy="30" r="3" fill="#7c3aed" filter="url(#glow)"/>
+    <circle cx="-15" cy="35" r="3" fill="#3b82f6" filter="url(#glow)"/>
+    <circle cx="5" cy="15" r="3" fill="#7c3aed" filter="url(#glow)"/>
+    <circle cx="25" cy="20" r="3" fill="#3b82f6" filter="url(#glow)"/>
+    <circle cx="45" cy="-10" r="3" fill="#7c3aed" filter="url(#glow)"/>
+    <circle cx="55" cy="-15" r="4" fill="url(#accent)" filter="url(#glow)">
+      <animate attributeName="r" values="4;6;4" dur="1.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;0.6;1" dur="1.5s" repeatCount="indefinite"/>
+    </circle>
+    <!-- Axis labels -->
+    <text x="-55" y="55" fill="#7c3aed" font-size="6" font-family="monospace" opacity="0.5">0</text>
+    <text x="-35" y="55" fill="#7c3aed" font-size="6" font-family="monospace" opacity="0.5">1</text>
+    <text x="-15" y="55" fill="#7c3aed" font-size="6" font-family="monospace" opacity="0.5">2</text>
+    <text x="5" y="55" fill="#7c3aed" font-size="6" font-family="monospace" opacity="0.5">3</text>
+    <text x="25" y="55" fill="#7c3aed" font-size="6" font-family="monospace" opacity="0.5">4</text>
+    <text x="45" y="55" fill="#7c3aed" font-size="6" font-family="monospace" opacity="0.5">5</text>
+    <!-- Pulsing prediction indicator -->
+    <circle cx="55" cy="-15" r="12" fill="none" stroke="#7c3aed" stroke-width="1" opacity="0">
+      <animate attributeName="r" values="8;20" dur="2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;0" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <!-- Data flow particles -->
+    <circle r="2" fill="#3b82f6" opacity="0.6">
+      <animate attributeName="cx" values="-55;55" dur="4s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="40;-15" dur="4s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.6;0" dur="4s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="1.5" fill="#7c3aed" opacity="0.6">
+      <animate attributeName="cx" values="-40;60" dur="3.5s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="35;-20" dur="3.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.6;0" dur="3.5s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+</svg>
