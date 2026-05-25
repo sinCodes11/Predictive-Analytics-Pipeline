@@ -1,5 +1,9 @@
 # Predictive Analytics Pipeline - Customer Churn Prediction
 
+<div align="center">
+  <img src="https://lottie.host/8040f7b8-8e10-4c57-8987-90c749b5c5e8/data_anim.gif" width="200" height="200" />
+</div>
+
 A complete end-to-end machine learning pipeline for predicting customer churn, deployed on Oracle Cloud Infrastructure (OCI) using **100% free tier resources**.
 
 ## Business Problem
